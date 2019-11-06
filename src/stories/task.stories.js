@@ -36,7 +36,7 @@ storiesOf('Task', module)
     return {
       components: { Task },
       template: `<task :task="task" @archiveTask="onArchiveTask" @pinTask="onPinTask"/>`,
-      data: () => ({ task: { ...task, state: 'TASK_ARCHIVEDEDE' } }),
+      data: () => ({ task: { ...task, state: 'TASK_ARCHIVED' } }),
       methods,
     };
   });
