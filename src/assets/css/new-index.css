@@ -1,6 +1,6 @@
 html,
 body {
-  margin: 0;
+  margin: 10;
   padding: 0;
 }
 blockquote,
@@ -107,4 +107,29 @@ input[type="submit"] {
 .wrapper-card {
   width:100%; 
   height:100%;
+}
+
+.input {
+  width: 250px;
+  height: 25px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.disabled {
+  border:none;
+  border: 1px solid #d2d4cf;
+  color: #d2d4cf;
+}
+
+.active {
+  border:none;
+  border: 1px solid #36454c;
+  color: #36454c; 
+}
+
+.input-primary {
+  border:none;
+  background: #36454c ;
+  color: #fff;
 }
