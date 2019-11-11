@@ -1,11 +1,7 @@
 import { configure } from '@storybook/vue';
-import '../src/assets/css/index.css';
+import '../src/assets/css/new-index.css';
+import 'vue-select/dist/vue-select.css';
 import 'storybook-chromatic';
 
-const req = require.context('../src', true, /\.stories.js$/);
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
-
-configure(loadStories, module);
+configure(require.context('../src', true, /\.stories\.js$/), module);
 

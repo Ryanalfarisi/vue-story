@@ -1,0 +1,110 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dd,
+dl,
+dt,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100%;
+  line-height: 1;
+  font-family: inherit;
+}
+.button {
+    width: 110px;
+    height: 40px;
+    margin: 10px;
+}
+.box {
+    border: 1px solid #d2d4cf;
+}
+.default {
+    color: #d2d4cf;
+}
+.link {
+    color: #36454c;
+    border: 1px solid #36454c; 
+}
+
+.primary {
+    background: #36454c;
+    color: #fff;
+    border:none;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+.round {
+    border: 1px solid #d2d4cf;
+    border-radius: 20px;
+}
+
+.card {
+  margin: 10px;
+  width: 300px;
+  min-height: 160px;
+  border: 1px solid #36454c;
+  padding: 20px;
+}
+.card-primary{
+  background: #36454c;
+  color: #fff;
+}
+.card-default{
+  background: #fff;
+  color:#36454c;
+ }
+
+.wrapper-card {
+  width:100%; 
+  height:100%;
+}

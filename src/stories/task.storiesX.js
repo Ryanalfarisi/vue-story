@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, object } from "@storybook/addon-knobs";
+import { withInfo } from '@storybook/addon-info';
 import Task from '../components/Task';
 
 export const task = {
@@ -16,7 +17,7 @@ export const methods = {
 };
 
 storiesOf('Task', module)
-.addDecorator(withKnobs)
+.addDecorator(withKnobs, withInfo)
   .add('default', () => {
     return {
       components: { Task },
@@ -36,12 +37,12 @@ storiesOf('Task', module)
       components: { Task },
       template: `<task :task="task" @archiveTask="onArchiveTask" @pinTask="onPinTask"/>`,
       data: () => ({ task: { ...task, state: 'TASK_PINNED' } }),
-      props: {
-        task: {
-          type: Object,
-          default: object("task", { ...task })
-        }
-      },
+      // props: {
+      //   task: {
+      //     type: Object,
+      //     default: object("task", { ...task })
+      //   }
+      // },
       methods,
     };
   })
@@ -52,4 +53,4 @@ storiesOf('Task', module)
       data: () => ({ task: { ...task, state: 'TASK_ARCHIVED' } }),
       methods,
     };
-  });
+  })
