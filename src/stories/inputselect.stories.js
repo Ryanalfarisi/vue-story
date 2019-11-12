@@ -14,9 +14,12 @@ export const methods = {
   onArchiveTask: action('onArchiveTask'),
 };
 
+// const stories = storiesOf('InputSelect', module);
+// stories.addDecorator(withKnobs);
+// stories.addDecorator(withInfo);
+
 storiesOf('InputSelect', module)
-.addDecorator(withInfo, withKnobs)
-  .addParameters({ component: InputSelect })
+.addDecorator(withKnobs).addDecorator(withInfo)
   .add('Default', () => ({
       components: { InputSelect },
       template: `<input-select :task="task"/>`,

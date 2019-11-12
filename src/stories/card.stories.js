@@ -9,12 +9,10 @@ export const behaviorCard = {
   title: 'Example title default',
   subTitle: 'Example Paragraph'
 };
-const stories = storiesOf('Card', module);
-stories.addDecorator(withKnobs);
-stories.addDecorator(withInfo);
 
-stories.addParameters({ component: Card })
-  .add('Card Default', () => {
+storiesOf('Card', module)
+.addDecorator(withKnobs).addDecorator(withInfo)
+.add('Card Default', () => {
     return {
       components: { Card },
       template: `<Card :behaviorCard="behaviorCard"/>`,

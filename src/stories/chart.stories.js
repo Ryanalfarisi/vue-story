@@ -60,11 +60,8 @@ export const LineChart = {
     }
   }
 };
-const stories = storiesOf('Chart', module);
-stories.addDecorator(withKnobs);
-stories.addDecorator(withInfo);
-
-stories.addParameters({ component: Chart })
+storiesOf('Chart', module)
+.addDecorator(withInfo).addDecorator(withKnobs)
   .add('Line Chart', () => {
     return {
       components: { Chart },

@@ -34,12 +34,6 @@
       vSelect
     },
     computed: {
-      // taskClass() {
-      //   return `list-item ${this.task.state}`;
-      // },
-      // isChecked() {
-      //   return this.task.state === 'TASK_ARCHIVED';
-      // },
     },
   };
 </script>
