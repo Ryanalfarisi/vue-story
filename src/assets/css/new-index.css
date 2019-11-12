@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 html,
 body {
   width: 100%;
@@ -285,4 +286,30 @@ select.fill{
 /*----- end-select ------*/
 input.input {
     margin: 20px;
+
+.primary .vs__search::placeholder,
+.primary .vs__dropdown-toggle,
+.primary .vs__dropdown-menu {
+  background: #36454c;
+  border: none;
+  color: #fff;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+.primary .vs__dropdown-option {
+color:#fff;
+}
+.primary .vs__clear,
+.primary .vs__open-indicator {
+  fill: #fff;
+}
+
+.disable .vs__dropdown-toggle {
+  border: 1px solid #707070 !important;
+}
+.default .vs__dropdown-toggle {
+  border: 1px solid #36454C !important;
+}
+.disable .vs__dropdown-menu {
+  color: red !important; 
 }

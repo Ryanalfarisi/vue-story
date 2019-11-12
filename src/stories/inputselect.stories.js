@@ -4,14 +4,9 @@ import { withKnobs, object } from "@storybook/addon-knobs";
 import { withInfo } from 'storybook-addon-vue-info';
 import InputSelect from '../components/InputSelect';
 
-export const task = {
-  id: '1',
-  option: ['Number 1', 'Number 2', 'Number 3', 'Number 4', 'Number 5'],
-};
-
-export const methods = {
-  onPinTask: action('onPinTask'),
-  onArchiveTask: action('onArchiveTask'),
+export const behaviorSelect = {
+  prefix: 'default',
+  option: ['number 1', 'number 2', 'number 3', 'number 4', 'number 5'],
 };
 
 storiesOf('InputSelect', module)
@@ -19,18 +14,34 @@ storiesOf('InputSelect', module)
   .addParameters({ component: InputSelect })
   .add('Default', () => ({
       components: { InputSelect },
-      template: `<input-select :task="task"/>`,
-      data: () => ({ task }),
+      template: `<input-select :behaviorSelect="behaviorSelect"/>`,
+      data: () => ({ behaviorSelect }),
       props: {
-        task: {
+        behaviorSelect: {
           type: Object,
-          default: object("task", { ...task })
+          default: object("behaviorSelect", { ...behaviorSelect })
         }
-      },
-      methods
+      }
   }),
   {
     info: {
-      summary : "Ini merupakan descriptsi dari code kami"
     }
   })
+  .add('Disable', () => ({
+    components: { InputSelect },
+    template: `<input-select :behaviorSelect="behaviorSelect"/>`,
+    data: () => ({ behaviorSelect: { ...behaviorSelect, prefix: 'disable'} }),
+}),
+{
+  info: {
+  }
+})
+.add('Primary', () => ({
+  components: { InputSelect },
+  template: `<input-select :behaviorSelect="behaviorSelect"/>`,
+  data: () => ({ behaviorSelect: { ...behaviorSelect, prefix: 'primary'} }),
+}),
+{
+info: {
+}
+})
