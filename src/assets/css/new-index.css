@@ -286,7 +286,7 @@ select.fill{
 /*----- end-select ------*/
 input.input {
     margin: 20px;
-
+}
 .primary .vs__search::placeholder,
 .primary .vs__dropdown-toggle,
 .primary .vs__dropdown-menu {
@@ -309,7 +309,9 @@ color:#fff;
 }
 .default .vs__dropdown-toggle {
   border: 1px solid #36454C !important;
+  background: white;
 }
+
 .disable .vs__dropdown-menu {
   color: red !important; 
 }

@@ -1,14 +1,13 @@
 <template>
-
-<div style="width:200px;">
-  <v-select placeholder="Select" :class="className" ref="dropdown" :options="this.behaviorSelect.option"></v-select>
-</div> 
+  <div>
+    <v-select placeholder="Select" :class="className" ref="dropdown" :disabled="this.behaviorSelect.disabled" :options="this.behaviorSelect.option"></v-select>
+  </div>
 </template>
 
 <script>
   import vSelect from 'vue-select';
   export default {
-    name: 'task',
+    name: 'inputSelect',
     props: {
       behaviorSelect: {
         type: Object,
@@ -18,7 +17,6 @@
     components:{
       vSelect
     },
-
     mounted() {
       if(this.behaviorSelect.prefix == 'open') {
         const dropdown  = this.$refs.dropdown
