@@ -4,76 +4,75 @@ import { withKnobs, object } from "@storybook/addon-knobs";
 import { withInfo } from 'storybook-addon-vue-info';
 import Chart from '../components/Chart.vue';
 
-export const LineChart = {
-  type: 'line',
-  data: {
-    labels: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'],
-    datasets: [
-      { // one line graph
-        label: 'Number of Moons',
-        data: [0, 0, 1, 2, 67, 62, 27, 14],
-        backgroundColor: [
-          'rgba(54,73,93,.5)', // Blue
-          'rgba(54,73,93,.5)',
-          'rgba(54,73,93,.5)',
-          'rgba(54,73,93,.5)',
-          'rgba(54,73,93,.5)',
-          'rgba(54,73,93,.5)',
-          'rgba(54,73,93,.5)',
-          'rgba(54,73,93,.5)'
-        ],
-        borderColor: [
-          '#36495d',
-          '#36495d',
-          '#36495d',
-          '#36495d',
-          '#36495d',
-          '#36495d',
-          '#36495d',
-          '#36495d',
-        ],
-        borderWidth: 3
-      },
-      { // another line graph
-        label: 'Planet Mass (x1,000 km)',
-        data: [4.8, 12.1, 12.7, 6.7, 139.8, 116.4, 50.7, 49.2],
-        backgroundColor: [
-        'rgba(71, 183,132,.5)', // Green
-        ],
-        borderColor: [
-        '#47b784',
-        ],
-        borderWidth: 3
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    lineTension: 1,
-    scales: {
-    yAxes: [{
-    ticks: {
-      beginAtZero: true,
-      padding: 25,
-      }
-    }]
+export const BarChart = {
+type: 'bar',
+    data: {
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9','10','11','12', '13', '14', '15', '16', '17', '18', '19', '20','21','22'],
+        datasets: [{
+            label: '# of Votes',
+            data: [90, 75, 30, 59, 24, 32, 75, 30, 59, 24, 32, 90, 75, 30, 59, 24, 32, 75, 30, 59, 24, 32 ],
+            backgroundColor: '#36454c',
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
     }
-  }
+};
+export const DoughnutChart = {
+  type: 'doughnut',
+    data: {
+      labels: ["category 1", "category 2", "category 3"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#36454c", "#d2d4cf","#ffffff"],
+          data: [30,50,20],
+          borderColor:["#36454c", "#d2d4cf","#ffffff"],
+          hoverBackgroundColor:["#36454c", "#d2d4cf","#ffffff"],
+        }
+      ]
+    },
+    options: {
+      title: {
+        display:false,
+      }
+    }
 };
 const stories = storiesOf('Chart', module);
 stories.addDecorator(withKnobs);
 stories.addDecorator(withInfo);
 
 stories.addParameters({ component: Chart })
-  .add('Line Chart', () => {
+    .add('Bar Chart', () => {
     return {
       components: { Chart },
       template: `<Chart :chartData="chartData"/>`,
-      data: () => ({ LineChart }),
+      data: () => ({ BarChart }),
       props: {
         chartData: {
           type: Object,
-          default: object("chartData", { ...LineChart })
+          default: object("chartData", { ...BarChart })
+        }
+      }
+    }
+  },
+  {
+    info: {}
+  }).add('Doughnut Chart', () => {
+    return {
+      components: { Chart },
+      template: `<Chart :chartData="chartData"/>`,
+      data: () => ({ DoughnutChart }),
+      props: {
+        chartData: {
+          type: Object,
+          default: object("chartData", { ...DoughnutChart })
         }
       }
     }

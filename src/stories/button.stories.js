@@ -6,7 +6,7 @@ import Button from '../components/Button.vue';
 
 export const behaviorButton = {
   shape: 'box',
-  type: 'default',
+  type: 'btn btn-default',
   title: 'Default'
 };
 const stories = storiesOf('Button', module);
@@ -14,7 +14,7 @@ stories.addDecorator(withKnobs);
 stories.addDecorator(withInfo);
 
 stories.addParameters({ component: Button })
-  .add('Box Default', () => {
+  .add('Button Default', () => {
     return {
       components: { Button },
       template: `<Button :behaviorButton="behaviorButton"/>`,
@@ -30,43 +30,59 @@ stories.addParameters({ component: Button })
   {
     info: {}
   })
-  .add('Box Link', () => {
+  .add('Button Primary', () => {
     return {
       components: { Button },
       template: `<Button :behaviorButton="behaviorButton"/>`,
-      data: () => ({ behaviorButton: { ...behaviorButton, shape: 'box', type: 'link' } }),
+      data: () => ({ behaviorButton: { ...behaviorButton, shape: 'box', type: 'btn btn-primary' } }),
     }
   },
   {
     info: {}
   })
-  .add('Box Primary', () => ({
+  .add('Button Secondary', () => ({
     components: { Button },
     template: `<Button :behaviorButton="behaviorButton"/>`,
-    data: () => ({ behaviorButton: { ...behaviorButton, shape: 'box', type: 'primary' } }),
+    data: () => ({ behaviorButton: { ...behaviorButton, shape: 'box', type: 'btn btn-secondary' } }),
   }),{
     info: {}
   })
-  .add('Round Default', () => ({
+  .add('Rounded Default', () => ({
     components: { Button },
     template: `<Button :behaviorButton="behaviorButton"/>`,
-    data: () => ({ behaviorButton: { ...behaviorButton, shape: 'round', type: 'default' } }),
+    data: () => ({ behaviorButton: { ...behaviorButton, shape: 'round', type: 'btn btn-default btn-rounded' } }),
   }),
   {
     info: {}
   })
-  .add('Round Link', () => ({
+  .add('Rounded Primary', () => ({
     components: { Button },
     template: `<Button :behaviorButton="behaviorButton"/>`,
-    data: () => ({ behaviorButton: { ...behaviorButton, shape: 'round', type: 'link' } }),
+    data: () => ({ behaviorButton: { ...behaviorButton, shape: 'round', type: 'btn btn-primary btn-rounded' } }),
   }),
   {
     info: {}
   })
-  .add('Round Primary', () => ({
+  .add('Rounded Secondary', () => ({
     components: { Button },
     template: `<Button :behaviorButton="behaviorButton"/>`,
-    data: () => ({ behaviorButton: { ...behaviorButton, shape: 'round', type: 'primary' } }),
+    data: () => ({ behaviorButton: { ...behaviorButton, shape: 'round', type: 'btn btn-secondary btn-rounded' } }),
+  }),
+  {
+    info: {}
+  })
+  .add('Button No Style', () => ({
+    components: { Button },
+    template: `<Button :behaviorButton="behaviorButton"/>`,
+    data: () => ({ behaviorButton: { ...behaviorButton, shape: 'box', type: 'btn nostyle' } }),
+  }),
+  {
+    info: {}
+  })
+  .add('Link', () => ({
+    components: { Button },
+    template: `<Button :behaviorButton="behaviorButton"/>`,
+    data: () => ({ behaviorButton: { ...behaviorButton, shape: 'box', type: 'btn link' } }),
   }),
   {
     info: {}

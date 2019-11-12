@@ -5,7 +5,7 @@ import { withInfo } from 'storybook-addon-vue-info';
 import Card from '../components/Card.vue';
 
 export const behaviorCard = {
-  type: 'card-default',
+  type: 'card primary',
   title: 'Example title default',
   subTitle: 'Example Paragraph'
 };
@@ -14,7 +14,7 @@ stories.addDecorator(withKnobs);
 stories.addDecorator(withInfo);
 
 stories.addParameters({ component: Card })
-  .add('Card Default', () => {
+  .add('Card Primary', () => {
     return {
       components: { Card },
       template: `<Card :behaviorCard="behaviorCard"/>`,
@@ -30,11 +30,11 @@ stories.addParameters({ component: Card })
   {
     info: {}
   })
-  .add('Card Primary', () => {
+  .add('Card Secondary', () => {
     return {
       components: { Card },
       template: `<Card :behaviorCard="behaviorCard"/>`,
-      data: () => ({ behaviorCard: { ...behaviorCard, title: 'Example Card Primary', subTitle: 'Example paragraf Primary', type: 'card-primary'} }),
+      data: () => ({ behaviorCard: { ...behaviorCard, title: 'Example Card Primary', subTitle: 'Example paragraf Primary', type: 'card secondary'} }),
     }
   },
   {

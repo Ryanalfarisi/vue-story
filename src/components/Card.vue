@@ -1,11 +1,11 @@
 <template>
   <div>
       <div :class="className">
-          <div class="wrapper-card">
-            <img src="../assets/image_pelakor.jpg" alt="" style="width:70px; border-radius:50%;">
-            <h1>{{this.behaviorCard.title}}</h1>
-            <p>{{this.behaviorCard.subTitle}}</p>
-          </div>
+        <div class="card-body">
+          <div class="card-icon"><img src="../assets/image_pelakor.jpg" alt=""/></div>
+          <div class="card-title">{{this.behaviorCard.title}}</div>
+          <div class="card-subtitle">{{this.behaviorCard.subTitle}}</div>
+        </div>
       </div>
   </div>
 </template>

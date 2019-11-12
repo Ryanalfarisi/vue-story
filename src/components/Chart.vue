@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="width:50%;">
       <canvas id="planet-chart"></canvas>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
     },
     methods:{
         createChart(chartId, chartData) {
-            const ctx = document.getElementById(chartId);
+            const ctx = document.getElementById("planet-chart");
             const myChart = new Chart(ctx, {
             type: chartData.type,
             data: chartData.data,

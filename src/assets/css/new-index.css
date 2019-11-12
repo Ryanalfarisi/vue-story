@@ -1,7 +1,12 @@
 html,
 body {
-  margin: 10;
+  width: 100%;
+  height: 100%;
   padding: 0;
+  margin: 0;
+  background: #e4e7e0;
+  font-family: 'Roboto', sans-serif;
+  color: #36454c;
 }
 blockquote,
 pre,
@@ -91,8 +96,6 @@ input[type="submit"] {
 .card {
   margin: 10px;
   width: 300px;
-  min-height: 160px;
-  border: 1px solid #36454c;
   padding: 20px;
 }
 .card-primary{
@@ -132,4 +135,154 @@ input[type="submit"] {
   border:none;
   background: #36454c ;
   color: #fff;
+}
+/*-----   select  -----*/
+select {
+    width: 60%;
+    padding: 5px;
+  margin-bottom: 10px;
+  display: block;
+  background: transparent;
+}
+select.fill{
+  background: #36454c;
+  color: #e4e7e0;
+}
+/*-----   end-select  -----*/
+/*-----   button  -----*/
+.btn{
+  padding: 10px 25px;
+  border:none;
+}
+.btn-rounded{
+  border-radius: 50px;
+}
+.btn-primary {
+  background: #36454c;
+  color: #e4e7e0;
+}
+.btn-secondary{
+  background: transparent;
+  color: #36454c;
+  border:1px solid #36454c
+}
+.btn-default{
+  background: transparent;
+  color:#888888;
+  border:1px solid #888888
+}
+.btn-nostyle {
+  background: transparent;
+}
+.link{
+  text-decoration: none;
+  color: #36454c;
+}
+/*-----   end-button  -----*/
+/*-----   color  -----*/
+.colorpreview{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.15);
+  margin:0 auto;
+}
+.primary{
+  background: #36454C;
+  color:#E4E7E0;
+}
+.secondary{
+  background:#E4E7E0;
+  color:#36454C;
+}
+.white{
+  background: #ffffff;
+}
+.regular{
+  background:#D2D4CF;
+}
+
+/*-----   end-color  -----*/
+/*-----   card  -----*/
+.card {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #36454c;
+}
+.card-icon{
+  margin-bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+.card-icon img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+.card-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.card-subtitle {
+    font-size: 12px;
+}
+.card.primary .card-icon{
+  background: #E4E7E0;
+}
+.card.secondary .card-icon{
+  background: #36454C;
+}
+/*-----   end-card  -----*/
+/*-----   pagination  -----*/
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  
+}
+
+.dark-pagination a.active {
+  background-color: #36454C;
+  color: white;
+}
+.light-pagination a.active {
+  background-color: #D2D4CF;
+  color: #36454C;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+.light-pagination a:first-child, .light-pagination a:last-child {
+  background:#D2D4CF;
+  color:#36454C;
+}
+.dark-pagination a:first-child, .dark-pagination a:last-child {
+  background:#36454C;
+  color:#E4E7E0;
+}
+.dark-pagination a:first-child:hover, .dark-pagination a:last-child:hover{
+  background:#4e5c63;
+}
+/*-----   pagination  -----*/
+/*----- select ------*/
+.v-select {
+    width: 13%;
+    margin: 20px;
+}
+.vs--single .vs__selected {
+  color: #e4e7e0;
+}
+/*----- end-select ------*/
+input.input {
+    margin: 20px;
 }
