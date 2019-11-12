@@ -6,9 +6,12 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook -p 9000",
+    "build-storybook": "build-storybook -c .storybook",
+    "chromatic": "CHROMATIC_APP_CODE=ssj1u8u3d4h chromatic"
   },
   "dependencies": {
+    "@storybook/addon-docs": "^5.2.6",
     "@storybook/addon-knobs": "^5.2.6",
     "@storybook/addon-links": "^5.2.6",
     "@storybook/addon-notes": "^5.2.6",

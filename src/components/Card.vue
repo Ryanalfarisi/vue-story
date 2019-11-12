@@ -12,7 +12,7 @@
 
 <script>
   export default {
-    name: 'button',
+    name: 'card',
     props: {
       behaviorCard: {
         type: Object,
