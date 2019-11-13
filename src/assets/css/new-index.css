@@ -260,6 +260,7 @@ select.fill{
 .light-pagination a.active {
   background-color: #D2D4CF;
   color: #36454C;
+  border: 1px solid #d2d4cf;
 }
 
 .pagination a:hover:not(.active) {background-color: #ddd;}

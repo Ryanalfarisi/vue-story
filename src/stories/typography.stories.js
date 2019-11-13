@@ -5,14 +5,12 @@ import { withInfo } from 'storybook-addon-vue-info';
 import Typography from '../components/Typography.vue';
 
 export const behaviorTypo = {
-  type: 'card primary',
-  title: 'Example title default',
-  subTitle: 'Example Paragraph'
+  type: 'Typography'
 };
 
 storiesOf('Typo', module)
 .addDecorator(withKnobs).addDecorator(withInfo)
-  .add('Card Primary', () => {
+  .add('Typography', () => {
     return {
       components: { Typography },
       template: `<Typography :behaviorTypo="behaviorTypo"/>`,
@@ -28,13 +26,4 @@ storiesOf('Typo', module)
   {
     info: {}
   })
-  .add('Card Secondary', () => {
-    return {
-      components: { behaviorTypo },
-      template: `<Typography :behaviorTypo="behaviorTypo"/>`,
-      data: () => ({ behaviorTypo: { ...behaviorTypo, title: 'Example Card Primary', subTitle: 'Example paragraf Primary', type: 'card secondary'} }),
-    }
-  },
-  {
-    info: {}
-  })
+  
