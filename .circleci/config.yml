@@ -5,4 +5,12 @@
        - image: circleci/ruby:2.4.1
      steps:
        - checkout
-       - run: echo "A first hello"
+       - run: echo "Start Building"
+       - run:
+            command: npm install # install dependencies
+       - run:
+            command: npm lint # lint your code
+       - run:
+            command: npm test # run your unit tests
+       - run:
+            command: npm run chromatic # run your visual tests
