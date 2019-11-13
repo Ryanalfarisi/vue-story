@@ -11,7 +11,7 @@ export const behaviorSelect = {
 };
 
 storiesOf('InputSelect', module)
-.addDecorator(withInfo, withKnobs)
+.addDecorator(withInfo).addDecorator(withKnobs)
   .add('Default', () => ({
       components: { InputSelect },
       template: `<input-select :behaviorSelect="behaviorSelect"/>`,

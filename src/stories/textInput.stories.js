@@ -8,11 +8,9 @@ export const behaviorInput = {
   type: 'disabled',
   text: 'Enter text here'
 };
-const stories = storiesOf('Input Text', module);
-stories.addDecorator(withKnobs);
-stories.addDecorator(withInfo);
 
-stories.addParameters({ component: InputText })
+storiesOf('Input Text', module)
+.addDecorator(withKnobs).addDecorator(withInfo)
   .add('Disabled', () => {
     return {
       components: { InputText },

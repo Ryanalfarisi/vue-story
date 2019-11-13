@@ -44,11 +44,9 @@ export const DoughnutChart = {
       }
     }
 };
-const stories = storiesOf('Chart', module);
-stories.addDecorator(withKnobs);
-stories.addDecorator(withInfo);
 
-stories.addParameters({ component: Chart })
+storiesOf('Chart', module)
+.addDecorator(withKnobs).addDecorator(withInfo)
     .add('Bar Chart', () => {
     return {
       components: { Chart },

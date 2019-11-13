@@ -9,11 +9,9 @@ export const behaviorCard = {
   title: 'Example title default',
   subTitle: 'Example Paragraph'
 };
-const stories = storiesOf('Card', module);
-stories.addDecorator(withKnobs);
-stories.addDecorator(withInfo);
 
-stories.addParameters({ component: Card })
+storiesOf('Card', module)
+.addDecorator(withInfo, withKnobs)
   .add('Card Primary', () => {
     return {
       components: { Card },

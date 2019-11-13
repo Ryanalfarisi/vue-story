@@ -9,11 +9,9 @@ export const behaviorButton = {
   type: 'btn btn-default',
   title: 'Default'
 };
-const stories = storiesOf('Button', module);
-stories.addDecorator(withKnobs);
-stories.addDecorator(withInfo);
 
-stories.addParameters({ component: Button })
+storiesOf('Button', module)
+.addDecorator(withKnobs).addDecorator(withInfo)
   .add('Button Default', () => {
     return {
       components: { Button },
