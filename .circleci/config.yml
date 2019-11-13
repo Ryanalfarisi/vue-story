@@ -8,9 +8,9 @@
        - run: echo "Start Building bro!"
        - run:
             command: npm install # install dependencies
-       - run:
-            command: npm lint # lint your code
-       - run:
-            command: npm test # run your unit tests
+     #   - run:
+     #        command: npm lint # lint your code
+     #   - run:
+     #        command: npm test # run your unit tests
        - run:
             command: npm run chromatic # run your visual tests
