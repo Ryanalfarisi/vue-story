@@ -5,7 +5,7 @@
     <h3>H3 Example Text (20px)</h3>
     <h4>H4 Example Text (15px)</h4>
     <h5>H5 Example Text (12px)</h5>
-    <h6>H6 Example Text (11px)</h6>    
+    <h6 style="color:red;">H6 Example Text (11px)</h6>    
   </div>
 </template>
 
