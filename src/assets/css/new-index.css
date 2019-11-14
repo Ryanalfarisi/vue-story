@@ -137,6 +137,127 @@ input[type="submit"] {
   background: #36454c ;
   color: #fff;
 }
+/*-----   left-sidebar  -----*/
+.left-sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  top: 0;
+  z-index: 10;
+  background: #e4e7e0;
+  border-right: 1px solid #d2d4ce;
+}
+.scroll-sidebar, .sidebar-nav .has-arrow {
+  position: relative;
+}
+a#dashboard {
+  text-decoration: none;
+  color: #36454c;
+  position: relative;
+}
+a#dashboard.active {
+    border: none;
+}
+a#dashboard h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 26px;
+  padding: 20px 30px 20px 40px;
+  margin: 0;
+}
+a#dashboard.active h2{
+  background: #36454c;
+  color: #e4e7e0;
+}
+a#dashboard.active h2:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #e4e7e0;
+  left: 235px;
+  top: 20px;
+}
+ul#sidebarnav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul#sidebarnav li {
+  padding: 0 40px;
+}
+ul#sidebarnav li p {
+  border-bottom: 1px solid #d2d4ce;
+  margin: 0;
+  padding: 20px 10px;
+  font-weight: 500;
+  color: #36454c;
+  font-size: 18px;
+}
+ul#sidebarnav li a {
+  text-decoration: none;
+}
+ul#sidebarnav li:hover {
+  background: #36454c;
+}
+ul#sidebarnav li:hover p,  ul#sidebarnav li.active p {
+  color: #e4e7e0;
+  border-bottom: none;
+}
+ul#sidebarnav li.active, ul#sidebarnav li.active:hover{
+  background: #36454c;
+  color: #e4e7e0;
+  position: relative;
+}
+ul#sidebarnav li .submenu-nav{
+  display: none;
+}
+ul#sidebarnav li.active .submenu-nav{
+  display: block;
+  list-style: none;
+  padding-bottom: 20px;
+  
+}
+ul#sidebarnav li ul.submenu-nav li {
+  padding-left: 0px;
+}
+ul#sidebarnav li.active:before{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #e4e7e0;
+  left: 235px;
+  top: 15px;
+  }
+  /*-----   search-sidebar  -----*/
+.search {
+    margin: 20px 0;
+}
+.search form {
+    background: #36454c;
+    padding: 10px;
+    vertical-align: middle;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 50px;
+}
+.search form img {
+    width: 15px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.search form input {
+    background: #36454c;
+    border: none;
+    color: #e4e7e0;
+}
+/*-----   end-search-sidebar  -----*/
+/*-----   end-left-sidebar  -----*/
 /*-----   select  -----*/
 select {
     width: 60%;
