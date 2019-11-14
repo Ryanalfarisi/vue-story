@@ -50,13 +50,14 @@ storiesOf('Chart', module)
     .add('Bar Chart', () => {
     return {
       components: { Chart },
-      template: `<Chart :chartData="chartData"/>`,
+      template: `<Chart :chartData="chartData" :chartId="'myChart'"/>`,
       data: () => ({ BarChart }),
       props: {
         chartData: {
           type: Object,
           default: object("chartData", { ...BarChart })
-        }
+        },
+        chartId : String
       }
     }
   },
@@ -65,13 +66,14 @@ storiesOf('Chart', module)
   }).add('Doughnut Chart', () => {
     return {
       components: { Chart },
-      template: `<Chart :chartData="chartData"/>`,
+      template: `<Chart :chartData="chartData" :chartId="'myChart'"/>`,
       data: () => ({ DoughnutChart }),
       props: {
         chartData: {
           type: Object,
           default: object("chartData", { ...DoughnutChart })
-        }
+        },
+        chartId : String
       }
     }
   },

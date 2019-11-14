@@ -1,6 +1,6 @@
 <template>
-  <div style="width:50%;">
-      <canvas id="planet-chart"></canvas>
+  <div style="width:45%; display: inline-block;">
+      <canvas :id="this.chartId"></canvas>
   </div>
 </template>
 
@@ -13,9 +13,10 @@ export default {
         type: Object,
         required: true,
       },
+      chartId: String,
     },
     mounted() {
-        this.createChart('planet-chart', this.chartData);
+        this.createChart(this.chartId, this.chartData);
     },
     data() {
         return {

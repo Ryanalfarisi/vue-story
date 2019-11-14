@@ -8,9 +8,9 @@ export const behaviorTypeNav = {
   type: 'TypeNav'
 };
 
-storiesOf('Type Navigation', module)
+storiesOf('Navigation', module)
 .addDecorator(withKnobs).addDecorator(withInfo)
-  .add('TypeNav', () => {
+  .add('Side Nav', () => {
     return {
       components: { TypeNav },
       template: `<TypeNav :behaviorTypeNav="behaviorTypeNav"/>`,

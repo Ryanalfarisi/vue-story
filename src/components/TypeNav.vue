@@ -1,5 +1,5 @@
 <template>
-  <div style="margin:20px">
+  <div>
     <aside class="left-sidebar">
       <a href="#" id="dashboard" class="active"><h2>Dashboard</h2></a>
       <div class="scroll-sidebar">
@@ -34,11 +34,5 @@
 <script>
   export default {
     name: 'typenav',
-    props: {
-      behaviorTypeNav: {
-        type: Object,
-        required: true,
-      },
-    }
   };
 </script>

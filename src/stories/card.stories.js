@@ -11,7 +11,7 @@ export const behaviorCard = {
 };
 
 storiesOf('Card', module)
-.addDecorator(withInfo, withKnobs)
+.addDecorator(withInfo).addDecorator(withKnobs)
   .add('Card Primary', () => {
     return {
       components: { Card },
