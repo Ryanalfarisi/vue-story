@@ -31,7 +31,7 @@ export const DoughnutChart = {
       datasets: [
         {
           label: "Population (millions)",
-          backgroundColor: ["#36454c", "#d2d4cf","#ffffff"],
+          backgroundColor: ["#36454f", "#d2d4cf","#ffffff"],
           data: [30,50,20],
           borderColor:["#36454c", "#d2d4cf","#ffffff"],
           hoverBackgroundColor:["#36454c", "#d2d4cf","#ffffff"],
