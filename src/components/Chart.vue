@@ -15,21 +15,26 @@ export default {
       },
     },
     mounted() {
-        this.createChart('planet-chart', this.planetChartData);
+        this.createChart('planet-chart', this.chartData);
     },
     data() {
         return {
-            planetChartData: this.chartData
+            myChart: null
         }
     },
     methods:{
         createChart(chartId, chartData) {
-            const ctx = document.getElementById("planet-chart");
-            const myChart = new Chart(ctx, {
-            type: chartData.type,
-            data: chartData.data,
-            options: chartData.options,
+            const ctx = document.getElementById(chartId);
+            this.myChart = new Chart(ctx, {
+                type: chartData.type,
+                data: chartData.data,
+                options: chartData.options,
             });
+        }
+    },
+    beforeDestroy() {
+       if(this.myChart) {
+            this.myChart.destroy();
         }
     }
 };
