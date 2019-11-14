@@ -258,6 +258,20 @@ ul#sidebarnav li.active:before{
 }
 /*-----   end-search-sidebar  -----*/
 /*-----   end-left-sidebar  -----*/
+/*-----   page-wrapper  -----*/
+.page-wrapper {
+    margin: 20px 20px 20px 270px;
+}
+.widget {
+    border: 1px solid #d2d4ce;
+    border-radius: 30px;
+  padding:30px;
+  margin:10px;
+}
+.widget-title {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
 /*-----   select  -----*/
 select {
     width: 60%;
