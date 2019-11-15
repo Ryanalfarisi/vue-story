@@ -12,11 +12,5 @@
 <script>
   export default {
     name: 'typography',
-    props: {
-      behaviorTypo: {
-        type: Object,
-        required: true,
-      },
-    }
   };
 </script>

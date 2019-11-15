@@ -23,7 +23,7 @@
               <div class="widget">
                 <div class="widget-title">Type Colors</div>
                 <div class="widget-content">
-                    <TypeColor :behaviorColor="behaviorColor"/>
+                    <TypeColor />
                 </div>
               </div>
             </div>
@@ -56,7 +56,7 @@
                         <div class="widget">
                             <div class="widget-title">Typhography</div>
                             <div class="widget-content">
-                                <Typography :behaviorTypo="behaviorTypo"/>
+                                <Typography />
                             </div>
                         </div>
                     </div>

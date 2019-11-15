@@ -31,11 +31,5 @@
 <script>
   export default {
     name: 'typecolor',
-    props: {
-      behaviorColor: {
-        type: Object,
-        required: true,
-      },
-    }
   };
 </script>
