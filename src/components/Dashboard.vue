@@ -2,8 +2,74 @@
   <div>
     <type-nav />
     <div class="page-wrapper">
-        <Chart :chartData="this.barChart" :chartId="'barChart'"/>
-        <Chart :chartData="this.DoughnutChart" :chartId="'donutChart'"/>
+        <div class="row">
+            <div class="col-6">
+                <div class="widget">
+                    <div class="widget-title">Charts</div>
+                    <div class="widget-content">
+                        <Chart :chartData="this.barChart" :chartId="'barChart'"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+              <div class="widget">
+                <div class="widget-title">Type Round Charts</div>
+                <div class="widget-content">
+                    <Chart :chartData="this.DoughnutChart" :chartId="'donutChart'"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="widget">
+                <div class="widget-title">Type Colors</div>
+                <div class="widget-content">
+                    <TypeColor :behaviorColor="behaviorColor"/>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="widget">
+                            <div class="widget-title">Type Cards</div>
+                            <div class="widget-content">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <Card :behaviorCard="behaviorCard"/>
+                                    </div>
+                                    <div class="col-6">
+                                        <Card :behaviorCard="behaviorCard2"/>
+                                    </div>
+                                    <div class="col-6">
+                                        <Card :behaviorCard="behaviorCard2"/>
+                                    </div>
+                                    <div class="col-6">
+                                        <Card :behaviorCard="behaviorCard"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="widget">
+                            <div class="widget-title">Typhography</div>
+                            <div class="widget-content">
+                                <Typography :behaviorTypo="behaviorTypo"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="widget">
+                <div class="widget-title">Type Button</div>
+                <div class="widget-content">
+                </div>
+            </div>
+        </div>
     </div>
   </div>
 </template>
@@ -11,6 +77,9 @@
 <script>
   import TypeNav from '../components/TypeNav.vue';
   import Chart from '../components/Chart.vue';
+  import TypeColor from '../components/TypeColor.vue';
+  import Card from '../components/Card.vue';
+  import Typography from '../components/Typography.vue';
   export default {
     name: 'dashboard',
     data() {
@@ -54,12 +123,26 @@
                         display:false,
                     }
                     }
-                }
+                }, 
+                behaviorCard: {
+                  type: 'card primary',
+                  title: 'Example title default',
+                  subTitle: 'Example Paragraph'
+                },
+                behaviorCard2: {
+                  type: 'card secondary',
+                  title: 'Example title default',
+                  subTitle: 'Example Paragraph'
+                },
+
         }
     },
     components:{
         TypeNav,
         Chart,
+        TypeColor,
+        Card,
+        Typography,
     },
     computed:{
         className() {

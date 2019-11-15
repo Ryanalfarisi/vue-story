@@ -1,5 +1,5 @@
 <template>
-  <div style="width:45%; display: inline-block;">
+  <div>
       <canvas :id="this.chartId"></canvas>
   </div>
 </template>
