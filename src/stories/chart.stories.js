@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, object } from "@storybook/addon-knobs";
+import { withKnobs, object, number } from "@storybook/addon-knobs";
 import { withInfo } from 'storybook-addon-vue-info';
 import Chart from '../components/Chart.vue';
 
@@ -50,13 +50,14 @@ storiesOf('Chart', module)
     .add('Bar Chart', () => {
     return {
       components: { Chart },
-      template: `<Chart :chartData="chartData" :chartId="'myChart'"/>`,
+      template: `<Chart :chartData="chartData" :chartId="'myChart'" :height="200"/>`,
       props: {
         chartData: {
           type: Object,
           default: object("chartData", { ...BarChart })
         },
-        chartId : String
+        chartId : String,
+        height: Number
       }
     }
   },
@@ -65,13 +66,14 @@ storiesOf('Chart', module)
   }).add('Doughnut Chart', () => {
     return {
       components: { Chart },
-      template: `<Chart :chartData="chartData" :chartId="'myChart'"/>`,
+      template: `<Chart :chartData="chartData" :chartId="'myChart'" :height="600"/>`,
       props: {
         chartData: {
           type: Object,
           default: object("chartData", { ...DoughnutChart })
         },
-        chartId : String
+        chartId : String,
+        height : Number
       }
     }
   },

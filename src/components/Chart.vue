@@ -1,6 +1,6 @@
 <template>
   <div>
-      <canvas :id="this.chartId"></canvas>
+      <canvas :id="this.chartId" :height="this.height"></canvas>
   </div>
 </template>
 
@@ -14,6 +14,7 @@ export default {
         required: true,
       },
       chartId: String,
+      height: Number
     },
     mounted() {
         this.createChart(this.chartId, this.chartData);

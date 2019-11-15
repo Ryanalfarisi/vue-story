@@ -7,7 +7,7 @@
                 <div class="widget">
                     <div class="widget-title">Charts</div>
                     <div class="widget-content">
-                        <Chart :chartData="this.barChart" :chartId="'barChart'"/>
+                        <Chart :chartData="this.barChart" :chartId="'barChart'" :height="200"/>
                     </div>
                 </div>
             </div>
@@ -15,7 +15,7 @@
               <div class="widget">
                 <div class="widget-title">Type Round Charts</div>
                 <div class="widget-content">
-                    <Chart :chartData="this.DoughnutChart" :chartId="'donutChart'"/>
+                    <Chart :chartData="this.DoughnutChart" :chartId="'donutChart'" :height="600"/>
                 </div>
               </div>
             </div>
@@ -67,46 +67,46 @@
                     <div class="widget-title">Type Button</div>
                     <div class="widget-content">
                         <div style="margin-bottom:20px">
-                            <Button :behaviorButton="{
+                            <Button-com :behaviorButton="{
                                 shape: 'box',
                                 type: 'btn btn-primary',
                                 title: 'primary' 
                             }"/>
-                            <Button :behaviorButton="{
+                            <Button-com  :behaviorButton="{
                                 shape: 'box',
                                 type: 'btn btn-secondary',
                                 title: 'Secondary' 
                             }"/>
-                            <Button :behaviorButton="{
+                            <Button-com  :behaviorButton="{
                                 shape: 'box',
                                 type: 'btn btn-default',
                                 title: 'Default' 
                             }"/>
                         </div>
                         <div style="margin-bottom:20px">
-                            <Button :behaviorButton="{
+                            <Button-com  :behaviorButton="{
                                 shape: 'round',
                                 type: 'btn btn-primary',
                                 title: 'primary' 
                             }"/>
-                            <Button :behaviorButton="{
+                            <Button-com  :behaviorButton="{
                                 shape: 'round',
                                 type: 'btn btn-secondary',
                                 title: 'Secondary' 
                             }"/>
-                            <Button :behaviorButton="{
+                            <Button-com  :behaviorButton="{
                                 shape: 'round',
                                 type: 'btn btn-default',
                                 title: 'Default' 
                             }"/>
                         </div>
                         <div style="margin-bottom:20px">
-                            <Button :behaviorButton="{
+                            <Button-com  :behaviorButton="{
                                 shape: 'box',
                                 type: 'btn btn nostyle',
                                 title: 'No style' 
                             }"/>
-                            <Button :behaviorButton="{
+                            <Button-com  :behaviorButton="{
                                 shape: 'box',
                                 type: 'btn link',
                                 title: 'Link' 
@@ -180,7 +180,7 @@
   import TypeColor from '../components/TypeColor.vue';
   import Card from '../components/Card.vue';
   import Typography from '../components/Typography.vue';
-  import Button from '../components/Button.vue';
+  import ButtonCom from '../components/Button.vue';
   import InputSelect from '../components/InputSelect.vue';
   import InputText from '../components/InputText.vue';
   import Pagination from '../components/Pagination.vue';
@@ -247,7 +247,7 @@
         TypeColor,
         Card,
         Typography,
-        Button,
+        ButtonCom,
         InputSelect,
         InputText,
         Pagination,
