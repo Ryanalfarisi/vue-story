@@ -15,7 +15,6 @@ storiesOf('Input Text', module)
     return {
       components: { InputText },
       template: `<input-text :behaviorInput="behaviorInput"/>`,
-      data: () => ({ behaviorInput }),
       props: {
         behaviorInput: {
           type: Object,

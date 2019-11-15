@@ -14,7 +14,6 @@ storiesOf('Pagination', module)
     return {
       components: { Pagination },
       template: `<Pagination :behaviorPagination="behaviorPagination"/>`,
-      data: () => ({ behaviorPagination }),
       props: {
         behaviorPagination: {
           type: Object,
@@ -30,7 +29,6 @@ storiesOf('Pagination', module)
     return {
       components: { Pagination },
       template: `<Pagination :behaviorPagination="behaviorPagination"/>`,
-      data: () => ({ behaviorPagination }),
       props: {
         behaviorPagination: {
           type: Object,

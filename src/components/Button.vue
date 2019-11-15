@@ -1,17 +1,21 @@
 <template>
-  <v-fragment>
+  <fragment>
       <button :class="className">{{titleName}}</button>
-  </v-fragment>
+  </fragment>
 </template>
 
 <script>
+  import { Fragment } from 'vue-fragment'
   export default {
-    name: 'button',
+    name: 'mybutton',
     props: {
       behaviorButton: {
         type: Object,
         required: true,
       },
+    },
+    components:{
+      Fragment
     },
     computed:{
         className() {

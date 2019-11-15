@@ -16,7 +16,6 @@ storiesOf('Button', module)
     return {
       components: { Button },
       template: `<Button :behaviorButton="behaviorButton"/>`,
-      data: () => ({ behaviorButton }),
       props: {
         behaviorButton: {
           type: Object,

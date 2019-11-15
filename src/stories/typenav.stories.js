@@ -14,7 +14,6 @@ storiesOf('Navigation', module)
     return {
       components: { TypeNav },
       template: `<TypeNav :behaviorTypeNav="behaviorTypeNav"/>`,
-      data: () => ({ behaviorTypeNav }),
       props: {
         behaviorTypeNav: {
           type: Object,

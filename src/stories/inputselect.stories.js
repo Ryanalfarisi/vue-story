@@ -15,7 +15,6 @@ storiesOf('InputSelect', module)
   .add('Default', () => ({
       components: { InputSelect },
       template: `<input-select :behaviorSelect="behaviorSelect"/>`,
-      data: () => ({ behaviorSelect }),
       props: {
         behaviorSelect: {
           type: Object,

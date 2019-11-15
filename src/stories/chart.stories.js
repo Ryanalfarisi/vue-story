@@ -51,7 +51,6 @@ storiesOf('Chart', module)
     return {
       components: { Chart },
       template: `<Chart :chartData="chartData" :chartId="'myChart'"/>`,
-      data: () => ({ BarChart }),
       props: {
         chartData: {
           type: Object,
@@ -67,7 +66,6 @@ storiesOf('Chart', module)
     return {
       components: { Chart },
       template: `<Chart :chartData="chartData" :chartId="'myChart'"/>`,
-      data: () => ({ DoughnutChart }),
       props: {
         chartData: {
           type: Object,

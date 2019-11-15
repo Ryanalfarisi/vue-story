@@ -16,7 +16,6 @@ storiesOf('Card', module)
     return {
       components: { Card },
       template: `<Card :behaviorCard="behaviorCard"/>`,
-      data: () => ({ behaviorCard }),
       props: {
         behaviorCard: {
           type: Object,
