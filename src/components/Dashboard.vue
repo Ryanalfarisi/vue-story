@@ -62,11 +62,111 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-4">
-            <div class="widget">
-                <div class="widget-title">Type Button</div>
-                <div class="widget-content">
+            <div class="col-4">
+                <div class="widget">
+                    <div class="widget-title">Type Button</div>
+                    <div class="widget-content">
+                        <div style="margin-bottom:20px">
+                            <Button :behaviorButton="{
+                                shape: 'box',
+                                type: 'btn btn-primary',
+                                title: 'primary' 
+                            }"/>
+                            <Button :behaviorButton="{
+                                shape: 'box',
+                                type: 'btn btn-secondary',
+                                title: 'Secondary' 
+                            }"/>
+                            <Button :behaviorButton="{
+                                shape: 'box',
+                                type: 'btn btn-default',
+                                title: 'Default' 
+                            }"/>
+                        </div>
+                        <div style="margin-bottom:20px">
+                            <Button :behaviorButton="{
+                                shape: 'round',
+                                type: 'btn btn-primary',
+                                title: 'primary' 
+                            }"/>
+                            <Button :behaviorButton="{
+                                shape: 'round',
+                                type: 'btn btn-secondary',
+                                title: 'Secondary' 
+                            }"/>
+                            <Button :behaviorButton="{
+                                shape: 'round',
+                                type: 'btn btn-default',
+                                title: 'Default' 
+                            }"/>
+                        </div>
+                        <div style="margin-bottom:20px">
+                            <Button :behaviorButton="{
+                                shape: 'box',
+                                type: 'btn btn nostyle',
+                                title: 'No style' 
+                            }"/>
+                            <Button :behaviorButton="{
+                                shape: 'box',
+                                type: 'btn link',
+                                title: 'Link' 
+                            }"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="widget">
+                    <div class="widget-title">Type Select</div>
+                    <div class="widget-content"> 
+                        <input-select :behaviorSelect="{
+                            prefix: 'primary',
+                            option: ['number 1', 'number 2', 'number 3', 'number 4', 'number 5'],
+                            disabled: false
+                        }"/>
+                        <input-select :behaviorSelect="{
+                            prefix: 'default',
+                            option: ['number 1', 'number 2', 'number 3', 'number 4', 'number 5'],
+                            disabled: false
+                        }"/>
+                        <input-select :behaviorSelect="{
+                            prefix: 'disable',
+                            option: ['number 1', 'number 2', 'number 3', 'number 4', 'number 5'],
+                            disabled: false
+                        }"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="widget">
+                    <div class="widget-title">Type Text Input</div>
+                    <div class="widget-content">
+                        <input-text :behaviorInput="{
+                            type: 'input-primary',
+                            text: 'Enter text here'
+                        }"/>
+                        <input-text :behaviorInput="{
+                            type: 'active',
+                            text: 'Enter text here'
+                        }"/>
+                        <input-text :behaviorInput="{
+                            type: 'disable',
+                            text: 'Enter text here'
+                        }"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="widget">
+                    <div class="widget-title">Type Pagination</div>
+                    <div class="widget-content">
+                        <Pagination :behaviorPagination="{
+                            type: 'light'
+                        }"/>
+                        <Pagination :behaviorPagination="{
+                            type: 'dark'
+                        }"/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,6 +180,10 @@
   import TypeColor from '../components/TypeColor.vue';
   import Card from '../components/Card.vue';
   import Typography from '../components/Typography.vue';
+  import Button from '../components/Button.vue';
+  import InputSelect from '../components/InputSelect.vue';
+  import InputText from '../components/InputText.vue';
+  import Pagination from '../components/Pagination.vue';
   export default {
     name: 'dashboard',
     data() {
@@ -143,6 +247,10 @@
         TypeColor,
         Card,
         Typography,
+        Button,
+        InputSelect,
+        InputText,
+        Pagination,
     },
     computed:{
         className() {

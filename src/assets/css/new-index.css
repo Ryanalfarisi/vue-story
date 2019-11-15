@@ -62,7 +62,6 @@ td {
 .button {
     width: 110px;
     height: 40px;
-    margin: 10px;
 }
 .box {
     border: 1px solid #d2d4cf;
@@ -478,15 +477,15 @@ select.fill{
 /*-----   pagination  -----*/
 /*----- select ------*/
 .v-select {
-    width: 13%;
-    margin: 20px;
+    width: 130px;
+    margin: 20px 5px;
 }
 .vs--single .vs__selected {
   color: #e4e7e0;
 }
 /*----- end-select ------*/
 input.input {
-    margin: 20px;
+    /*margin: 20px;*/
 }
 .primary .vs__search::placeholder,
 .primary .vs__dropdown-toggle,

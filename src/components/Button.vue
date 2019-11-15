@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <v-fragment>
       <button :class="className">{{titleName}}</button>
-  </div>
+  </v-fragment>
 </template>
 
 <script>
