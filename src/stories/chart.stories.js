@@ -30,7 +30,7 @@ export const DoughnutChart = {
       labels: ["category 1", "category 2", "category 3"],
       datasets: [
         {
-          label: "Population (millions)",
+          label: "Populations (millions)",
           backgroundColor: ["#36454c", "#d2d4cf","#ffffff"],
           data: [30,50,20],
           borderColor:["#36454c", "#d2d4cf","#ffffff"],
