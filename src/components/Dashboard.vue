@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="widget">
-                    <div class="widget-title">Charts</div>
+                    <div class="widget-title benar">Charts</div>
                     <div class="widget-content">
                         <Chart :chartData="this.barChart" :chartId="'barChart'" :height="200"/>
                     </div>
