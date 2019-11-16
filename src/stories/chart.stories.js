@@ -11,7 +11,7 @@ type: 'bar',
         datasets: [{
             label: '# of Votes',
             data: [90, 75, 30, 59, 24, 32, 75, 30, 59, 24, 32, 90, 75, 30, 59, 24, 32, 75, 30, 59, 24, 32 ],
-            backgroundColor: '#36454c',
+            backgroundColor: '#36ff4c',
         }]
     },
     options: {
@@ -31,7 +31,7 @@ export const DoughnutChart = {
       datasets: [
         {
           label: "Populations (millions)",
-          backgroundColor: ["#36454c", "#d2d4cf","#ffffff"],
+          backgroundColor: ["#36cf4c", "#73c000","#ffffff"],
           data: [30,50,20],
           borderColor:["#36454c", "#d2d4cf","#ffffff"],
           hoverBackgroundColor:["#36454c", "#d2d4cf","#ffffff"],
